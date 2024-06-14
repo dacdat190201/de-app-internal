@@ -1,0 +1,13 @@
+.home-header-container {
+  display: flex;
+  justify-content: space-between;
+  background-color: antiquewhite;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  .home-header-container-left {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+  }
+}
