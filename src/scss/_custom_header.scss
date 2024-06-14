@@ -1,13 +1,45 @@
-.home-header-container {
+.c-wapper-home-header {
   display: flex;
   justify-content: space-between;
-  background-color: antiquewhite;
-  max-width: 1200px;
-  margin: 0 auto;
+  .header-background-left {
+    width: 50%;
+    img {
+      width: 100%;
+    }
+  }
+  .header-background-right {
+    width: 50%;
+    height: 90vh;
+    position: relative; /* Ensure positioning context for the absolutely positioned image */
+  }
 
-  .home-header-container-left {
+  .header-background-right img {
+    border-radius: 0 0 0 120px;
+    position: absolute; /* Position the image absolutely within the container */
+    top: 0;
+    left: 0;
+    width: 100%; /* Ensure the image takes up the full width of its container */
+    height: 100%; /* Ensure the image takes up the full height of its container */
+    object-fit: cover; /* Cover the entire container while maintaining aspect ratio */
+  }
+}
+.home-header-sidebar {
+  position: absolute;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  left: 0;
+  right: 0;
+  margin: 40px auto 0px; /* Center horizontally */
+
+  .home-header-sidebar-left {
     display: flex;
     gap: 12px;
     align-items: center;
+    .home-header-sidebar-title {
+      color: #1b1c57;
+      font-size: 16px;
+      font-weight: bold;
+    }
   }
 }
