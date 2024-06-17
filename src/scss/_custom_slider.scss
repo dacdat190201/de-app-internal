@@ -1,0 +1,38 @@
+.custom-slick-slider {
+  position: absolute;
+  left: 70px;
+  bottom: 50px;
+  display: flex;
+  gap: 16px;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  width: 100%;
+  .custom-slick-slider-item {
+    padding: 24px;
+    background-color: #fff;
+    border-radius: 32px;
+    display: flex;
+    gap: 16px;
+    .custom-slick-slider-list-avatar {
+      display: flex;
+      align-items: center;
+    }
+    .custom-slick-slider-item-title {
+      text-wrap: nowrap;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      font-weight: bold;
+      line-height: 24px;
+      color: #1b1c57;
+      span {
+        line-height: 20px;
+        font-size: 12px;
+        font-weight: 500;
+        color: #68799f;
+      }
+    }
+  }
+}
+.custom-slick-slider::-webkit-scrollbar {
+}

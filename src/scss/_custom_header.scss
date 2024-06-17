@@ -188,10 +188,8 @@
       }
     }
     .home-page-content-right {
-      display: flex;
-      align-items: flex-end;
-      .slick-top {
-      }
+      position: relative;
+      width: 50%;
     }
   }
 }
