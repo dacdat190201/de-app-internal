@@ -10,8 +10,12 @@ const TheHeader = () => {
         <div className="home-header-sidebar-title">Hounter</div>
       </div>
       <div className="home-header-sidebar-right">
-        <div>LOGO</div>
-        <div>NAME</div>
+        <div className="home-header-sidebar-right-menu">
+          <button>About Us</button>
+          <button>Article</button>
+          <button>Property</button>
+        </div>
+        <div className="signup-btn">Sign Up!</div>
       </div>
     </div>
   );

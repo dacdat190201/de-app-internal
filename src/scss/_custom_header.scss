@@ -1,45 +1,161 @@
 .c-wapper-home-header {
-  display: flex;
-  justify-content: space-between;
-  .header-background-left {
-    width: 50%;
-    img {
-      width: 100%;
+  position: relative;
+  .c-wapper-home-header-background {
+    display: flex;
+    justify-content: space-between;
+    .header-background-left {
+      z-index: -10;
+      top: 0;
+      left: 0;
+      position: absolute;
+      width: 50%;
+      img {
+        width: 100%;
+      }
+    }
+    .header-background-right {
+      width: 50%;
+      height: 90vh;
+      z-index: -10;
+      top: 0;
+      right: 0;
+      position: absolute;
+    }
+
+    .header-background-right img {
+      border-radius: 0 0 0 120px;
+      position: absolute; /* Position the image absolutely within the container */
+      top: 0;
+      left: 0;
+      width: 100%; /* Ensure the image takes up the full width of its container */
+      height: 100%; /* Ensure the image takes up the full height of its container */
+      object-fit: cover; /* Cover the entire container while maintaining aspect ratio */
     }
   }
-  .header-background-right {
-    width: 50%;
-    height: 90vh;
-    position: relative; /* Ensure positioning context for the absolutely positioned image */
-  }
-
-  .header-background-right img {
-    border-radius: 0 0 0 120px;
-    position: absolute; /* Position the image absolutely within the container */
-    top: 0;
-    left: 0;
-    width: 100%; /* Ensure the image takes up the full width of its container */
-    height: 100%; /* Ensure the image takes up the full height of its container */
-    object-fit: cover; /* Cover the entire container while maintaining aspect ratio */
-  }
-}
-.home-header-sidebar {
-  position: absolute;
-  max-width: 1200px;
-  display: flex;
-  justify-content: space-between;
-  left: 0;
-  right: 0;
-  margin: 40px auto 0px; /* Center horizontally */
-
-  .home-header-sidebar-left {
+  .home-header-sidebar {
     display: flex;
-    gap: 12px;
-    align-items: center;
-    .home-header-sidebar-title {
+    justify-content: space-between;
+    margin: 40px auto 0px !important; /* Center horizontally */
+
+    .home-header-sidebar-left {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      .home-header-sidebar-title {
+        color: #1b1c57;
+        font-size: 16px;
+        font-weight: bold;
+      }
+    }
+    .home-header-sidebar-right {
+      display: flex;
+      gap: 56px;
+      .home-header-sidebar-right-menu {
+        display: flex;
+        gap: 24px;
+        button {
+          padding: 6px 18px;
+          font-size: 14px;
+          font-weight: bold;
+          border-radius: 32px;
+          border: none;
+          background-color: rgba(255, 255, 255, 0.1);
+          border: 1px solid #ffffff;
+          color: #ffffff;
+        }
+      }
+      .signup-btn {
+        display: flex;
+        align-items: center;
+        padding: 6px 18px;
+        background-color: #d1fae5;
+        border-radius: 32px;
+        color: #047857;
+        font-weight: bold;
+        font-size: 14px;
+      }
+    }
+  }
+  .home-page-content {
+    margin-top: 96px;
+    position: relative;
+    display: flex;
+    gap: 32px;
+    flex-direction: column;
+    .home-page-content-title {
+      font-size: 40px;
       color: #1b1c57;
-      font-size: 16px;
       font-weight: bold;
+      text-wrap: nowrap;
+      max-width: fit-content;
+
+      .home-page-content-title-white {
+        color: #fff;
+        text-shadow: -1px -1px 0 #1b1c57, 1px -1px 0 #1b1c57, -1px 1px 0 #1b1c57,
+          1px 1px 0 #1b1c57;
+      }
+    }
+    .home-page-content-sub-title {
+      margin-top: 24px;
+      color: #626687;
+      font-size: 16px;
+      font-weight: 400;
+    }
+    .home-page-content-search {
+      max-width: 100%;
+      .ant-space-compact {
+        position: relative;
+        min-width: 496px;
+        .ant-input-affix-wrapper {
+          padding: 16px 24px;
+          border-radius: 32px;
+          .ant-input {
+            font-size: 14px;
+            color: #888b97;
+            font-weight: bold;
+            max-width: 300px;
+          }
+        }
+        .ant-input-outlined:hover {
+          border-color: #10b981;
+        }
+        .ant-input-outlined:focus-within {
+          border-color: #10b981;
+        }
+        .ant-input-prefix {
+          margin-right: 16px;
+        }
+        .ant-btn {
+          position: absolute;
+          display: flex;
+          gap: 13px;
+          height: 48px;
+          border-radius: 32px;
+          max-width: 109px;
+          z-index: 10;
+          background-color: #10b981;
+          top: 50%;
+          right: 4px;
+          transform: translateY(-50%);
+          font-size: 14px;
+          font-weight: bold;
+          font-family: var(--font-family);
+        }
+        .anticon-close-circle svg {
+          width: 18px;
+          height: 18px;
+        }
+      }
+    }
+    .home-page-content-our-partnership {
+      span {
+        color: #888b97;
+        font-weight: 500;
+      }
+      .home-page-content-list-icon {
+        display: flex;
+        gap: 32px;
+      }
     }
   }
 }
