@@ -1,8 +1,24 @@
 .c-wapper-home {
-  position: relative;
-  .c-wapper-home-header-background {
+  .c-wrapper-home-header-background {
+    position: relative;
     display: flex;
-    justify-content: space-between;
+  }
+  .c-wrapper-home-header-background::before {
+    content: "";
+    background-image: url("../assets/images/backgrounds/header-home.png");
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top -80px;
+    width: 50%;
+    height: 100%;
+    display: inline-block;
+    right: 0;
+    top: 0;
+    border-radius: 0 0 0 120px;
+    z-index: -10;
+  }
+  .c-wapper-home-header-background {
     .header-background-left {
       z-index: -10;
       top: 0;

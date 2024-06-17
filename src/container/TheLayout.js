@@ -1,6 +1,5 @@
 import React from "react";
 import TheHeader from "../components/TheHeader";
-import TheBackgroundHeader from "./TheBackgroundHeader";
 import TheContentHeader from "./TheContentHeader";
 import ThePopular from "../components/ThePopular";
 import TheFooter from "../components/TheFooter";
@@ -8,13 +7,14 @@ import TheFooter from "../components/TheFooter";
 const TheLayout = () => {
   return (
     <div className="c-wapper-home">
-      <TheBackgroundHeader />
-      <div className="c-warrap-size">
-        <TheHeader />
-        <TheContentHeader />
-        <ThePopular />
+      <div className="c-wrapper-home-header-background">
+        <div className="c-warrap-size container">
+          <TheHeader />
+          <TheContentHeader />
+        </div>
       </div>
-      <TheFooter />
+
+      {/* <TheFooter /> */}
     </div>
   );
 };
