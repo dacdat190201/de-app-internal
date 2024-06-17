@@ -14,22 +14,18 @@
       }
     }
     .header-background-right {
-      width: 50%;
-      height: 90vh;
+      border-radius: 0 0 0 120px;
+      width: 50%; /* Độ rộng của phần tử */
+      height: 72vh; /* Chiều cao của phần tử */
+      position: absolute;
       z-index: -10;
       top: 0;
       right: 0;
-      position: absolute;
-    }
-
-    .header-background-right img {
-      border-radius: 0 0 0 120px;
-      position: absolute; /* Position the image absolutely within the container */
-      top: 0;
-      left: 0;
-      width: 100%; /* Ensure the image takes up the full width of its container */
-      height: 100%; /* Ensure the image takes up the full height of its container */
-      object-fit: cover; /* Cover the entire container while maintaining aspect ratio */
+      /* Áp dụng hình nền và ngăn chặn lặp lại */
+      background-image: url("../assets/images/backgrounds/header-home.png");
+      background-size: cover; /* Hiển thị hình nền toàn bộ mà không bị bóp méo */
+      background-position: right top -60px; /* Đưa hình nền về phía bên phải và phía trên */
+      background-repeat: no-repeat; /* Ngăn chặn hình nền lặp lại */
     }
   }
   .home-header-sidebar {
@@ -59,9 +55,9 @@
           font-weight: bold;
           border-radius: 32px;
           border: none;
-          background-color: rgba(255, 255, 255, 0.1);
+          background-color: rgba(255, 255, 255, 0.3);
           border: 1px solid #ffffff;
-          color: #ffffff;
+          color: #f0f3fd;
         }
       }
       .signup-btn {
@@ -78,83 +74,92 @@
   }
   .home-page-content {
     margin-top: 96px;
-    position: relative;
     display: flex;
-    gap: 32px;
-    flex-direction: column;
-    .home-page-content-title {
-      font-size: 40px;
-      color: #1b1c57;
-      font-weight: bold;
-      text-wrap: nowrap;
-      max-width: fit-content;
+    justify-content: space-between;
+    .home-page-content-left {
+      display: flex;
+      gap: 32px;
+      flex-direction: column;
+      .home-page-content-title {
+        font-size: 40px;
+        color: #1b1c57;
+        font-weight: bold;
+        text-wrap: nowrap;
+        max-width: fit-content;
 
-      .home-page-content-title-white {
-        color: #fff;
-        text-shadow: -1px -1px 0 #1b1c57, 1px -1px 0 #1b1c57, -1px 1px 0 #1b1c57,
-          1px 1px 0 #1b1c57;
+        .home-page-content-title-white {
+          color: #fff;
+          text-shadow: -1px -1px 0 #1b1c57, 1px -1px 0 #1b1c57,
+            -1px 1px 0 #1b1c57, 1px 1px 0 #1b1c57;
+        }
       }
-    }
-    .home-page-content-sub-title {
-      margin-top: 24px;
-      color: #626687;
-      font-size: 16px;
-      font-weight: 400;
-    }
-    .home-page-content-search {
-      max-width: 100%;
-      .ant-space-compact {
-        position: relative;
-        min-width: 496px;
-        .ant-input-affix-wrapper {
-          padding: 16px 24px;
-          border-radius: 32px;
-          .ant-input {
+      .home-page-content-sub-title {
+        margin-top: 24px;
+        color: #626687;
+        font-size: 16px;
+        font-weight: 400;
+      }
+      .home-page-content-search {
+        max-width: 100%;
+        .ant-space-compact {
+          position: relative;
+          min-width: 496px;
+          .ant-input-affix-wrapper {
+            padding: 16px 24px;
+            border-radius: 32px;
+            .ant-input {
+              font-size: 14px;
+              color: #888b97;
+              font-weight: bold;
+              max-width: 300px;
+            }
+          }
+          .ant-input-outlined:hover {
+            border-color: #10b981;
+          }
+          .ant-input-outlined:focus-within {
+            border-color: #10b981;
+          }
+          .ant-input-prefix {
+            margin-right: 16px;
+          }
+          .ant-btn {
+            position: absolute;
+            display: flex;
+            gap: 13px;
+            height: 48px;
+            border-radius: 32px;
+            max-width: 109px;
+            z-index: 10;
+            background-color: #10b981;
+            top: 50%;
+            right: 4px;
+            transform: translateY(-50%);
             font-size: 14px;
-            color: #888b97;
             font-weight: bold;
-            max-width: 300px;
+            font-family: var(--font-family);
+          }
+          .anticon-close-circle svg {
+            width: 18px;
+            height: 18px;
           }
         }
-        .ant-input-outlined:hover {
-          border-color: #10b981;
+      }
+      .home-page-content-our-partnership {
+        span {
+          color: #888b97;
+          font-weight: 500;
         }
-        .ant-input-outlined:focus-within {
-          border-color: #10b981;
-        }
-        .ant-input-prefix {
-          margin-right: 16px;
-        }
-        .ant-btn {
-          position: absolute;
+        .home-page-content-list-icon {
           display: flex;
-          gap: 13px;
-          height: 48px;
-          border-radius: 32px;
-          max-width: 109px;
-          z-index: 10;
-          background-color: #10b981;
-          top: 50%;
-          right: 4px;
-          transform: translateY(-50%);
-          font-size: 14px;
-          font-weight: bold;
-          font-family: var(--font-family);
-        }
-        .anticon-close-circle svg {
-          width: 18px;
-          height: 18px;
+          gap: 32px;
         }
       }
     }
-    .home-page-content-our-partnership {
-      span {
-        color: #888b97;
-        font-weight: 500;
-      }
-      .home-page-content-list-icon {
-        display: flex;
-        gap: 32px;
+    .home-page-content-right {
+      display: flex;
+      align-items: flex-end;
+      .slick-top {
       }
     }
   }
