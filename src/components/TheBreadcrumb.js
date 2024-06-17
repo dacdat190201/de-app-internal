@@ -1,6 +1,6 @@
 import React from "react";
 
-const TheBreadcrumb = (title) => {
+const TheBreadcrumb = ({ title }) => {
   return (
     <div className="breadcrum-bar">
       <svg
@@ -12,7 +12,7 @@ const TheBreadcrumb = (title) => {
       >
         <rect width="32" height="1" fill="#F59E0B" />
       </svg>
-      {title}
+      <div className="breadcrum-bar-title">{title}</div>
     </div>
   );
 };

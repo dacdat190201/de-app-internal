@@ -1,0 +1,11 @@
+.breadcrum-bar {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  .breadcrum-bar-title {
+    font-size: 14px;
+    color: #f59e0b;
+    font-weight: 600;
+    cursor: pointer;
+  }
+}

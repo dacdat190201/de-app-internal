@@ -18,6 +18,21 @@
     border-radius: 0 0 0 120px;
     z-index: -10;
   }
+  .c-wrapper-home-header-background::after {
+    content: "";
+    background-image: url("../assets/images/backgrounds/header-shadowsbox.png");
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 50%;
+    height: 100%;
+    display: inline-block;
+    left: 0;
+    top: 0;
+    border-radius: 0 0 0 120px;
+    z-index: -10;
+  }
   .c-wapper-home-header-background {
     .header-background-left {
       z-index: -10;

@@ -1,25 +1,31 @@
-.c-wapper-home-footer-background {
-  width: 100%;
-  .c-wapper-home-footer1 {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    z-index: -10;
-    width: 40%;
-  }
-  .c-wapper-home-footer2 {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    z-index: -5;
-    width: 40%;
-  }
+.footer-container::before {
+  content: "";
+  background-image: url("../assets/images/backgrounds/bg-background-1.png");
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 30%;
+  height: 50%;
+  display: inline-block;
+  right: 0;
+  bottom: 0;
+  z-index: -10;
+}
+.footer-container::after {
+  content: "";
+  background-image: url("../assets/images/backgrounds/bg-background-2.png");
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 30%;
+  height: 30%;
+  right: 100px;
+  bottom: 0;
+  z-index: -5;
 }
 .footer-container {
-  padding: 120px 0;
-}
-.home-footer {
-  margin: 120px;
   .home-footer-container {
     display: flex;
     justify-content: space-between;

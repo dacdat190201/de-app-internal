@@ -1,7 +1,13 @@
 import React from "react";
+import TheBreadcrumb from "./TheBreadcrumb";
 
 const ThePopular = () => {
-  return <div style={{ height: 500 }}>ThePopular</div>;
+  return (
+    <div className="the-popular-page container">
+      <TheBreadcrumb title={"Our Recommendation"} />
+      <div></div>
+    </div>
+  );
 };
 
 export default ThePopular;
