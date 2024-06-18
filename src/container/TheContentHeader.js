@@ -30,9 +30,7 @@ const TheContentHeader = () => {
           </div>
         </div>
       </div>
-      <div className="home-page-content-right">
-        <SlideShow />
-      </div>
+      <SlideShow />
     </div>
   );
 };

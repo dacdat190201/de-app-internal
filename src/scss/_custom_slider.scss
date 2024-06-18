@@ -1,12 +1,16 @@
 .custom-slick-slider {
   position: absolute;
+  bottom: 90px;
+  right: -53%;
+  width: 100%;
 
   .custom-slick-slider-item {
-    padding: 24px;
+    padding: 29px;
     background-color: #fff;
     border-radius: 32px;
-    display: flex;
+    display: flex !important;
     gap: 16px;
+    width: auto;
     .custom-slick-slider-list-avatar {
       display: flex;
       align-items: center;
@@ -25,6 +29,38 @@
         font-weight: 500;
         color: #68799f;
       }
+    }
+  }
+}
+.slick-slide {
+  display: inline-block;
+  padding-right: 20px;
+}
+
+.slider-item {
+  width: auto;
+}
+.custom-arrow-btn {
+  position: absolute;
+  left: 53.5%;
+  bottom: 5%;
+  display: flex;
+  gap: 24px;
+  .arrow-btn {
+    background-color: #e0e3eb;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  .active {
+    cursor: pointer;
+    background-color: #10b981;
+    svg {
+      color: #fff;
     }
   }
 }
