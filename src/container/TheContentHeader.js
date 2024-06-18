@@ -4,7 +4,7 @@ import travel from "../assets/icon/traveloka_logo 2.png";
 import ticket from "../assets/icon/traveloka_logo 5.png";
 import air from "../assets/icon/traveloka_logo 3.png";
 import trip from "../assets/icon/traveloka_logo 4.png";
-import TheSlickTop from "../components/TheSlickTop";
+import SlideShow from "../components/SlideToShow/SlideShow";
 const TheContentHeader = () => {
   return (
     <div className="home-page-content">
@@ -31,7 +31,7 @@ const TheContentHeader = () => {
         </div>
       </div>
       <div className="home-page-content-right">
-        <TheSlickTop />
+        <SlideShow />
       </div>
     </div>
   );

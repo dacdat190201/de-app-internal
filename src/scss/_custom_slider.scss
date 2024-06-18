@@ -1,12 +1,6 @@
 .custom-slick-slider {
   position: absolute;
-  left: 1020px;
-  bottom: 50px;
-  display: flex;
-  gap: 16px;
-  overflow: hidden;
-  scroll-behavior: smooth;
-  width: 100%;
+
   .custom-slick-slider-item {
     padding: 24px;
     background-color: #fff;
@@ -33,6 +27,4 @@
       }
     }
   }
-}
-.custom-slick-slider::-webkit-scrollbar {
 }

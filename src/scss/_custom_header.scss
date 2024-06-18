@@ -3,6 +3,7 @@
     position: relative;
     display: flex;
     overflow: hidden;
+    height: 720px;
   }
   .c-wrapper-home-header-background::before {
     content: "";
@@ -10,7 +11,7 @@
     position: absolute;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center top -80px;
+    background-position: center 0px;
     width: 50%;
     height: 100%;
     display: inline-block;
