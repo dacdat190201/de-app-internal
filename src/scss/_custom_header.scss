@@ -2,6 +2,7 @@
   .c-wrapper-home-header-background {
     position: relative;
     display: flex;
+    overflow: hidden;
   }
   .c-wrapper-home-header-background::before {
     content: "";
@@ -188,7 +189,6 @@
       }
     }
     .home-page-content-right {
-      position: relative;
       width: 50%;
     }
   }

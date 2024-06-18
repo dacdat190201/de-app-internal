@@ -1,35 +1,28 @@
-.footer-container::before {
+.footer::before {
   content: "";
-  background-image: url("../assets/images/backgrounds/bg-background-1.png");
   position: absolute;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  width: 30%;
-  height: 50%;
-  display: inline-block;
-  right: 0;
   bottom: 0;
+  right: 0;
+  width: 100%; /* Đặt chiều rộng của background 1 lớn hơn */
+  height: 100%; /* Chiều cao của background sẽ là 100% để nó bao phủ toàn bộ footer */
+  background-image: url("../assets/images/backgrounds/bg-background-1.png"),
+    url("../assets/images/backgrounds/bg-background-2.png");
+  background-repeat: no-repeat;
+  background-size: auto 100%, auto; /* Đặt kích thước của background 1 là auto để giữ nguyên tỷ lệ và background 2 là auto */
+  background-position: bottom right;
   z-index: -10;
 }
-.footer-container::after {
-  content: "";
-  background-image: url("../assets/images/backgrounds/bg-background-2.png");
-  position: absolute;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  width: 30%;
-  height: 30%;
-  right: 100px;
-  bottom: 0;
-  z-index: -5;
-}
-.footer-container {
-  .home-footer-container {
-    display: flex;
-    justify-content: space-between;
+.footer {
+  background: none;
+  position: relative;
+  padding: 150px 0px 100px 0px;
+  .footer-container {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
     .home-footer-left {
+      grid-column: 1 / 2;
       max-width: 320px;
       display: flex;
       flex-direction: column;
@@ -58,29 +51,33 @@
         }
       }
     }
-    .home-footer-right {
-      ul {
-        display: flex;
-        gap: 84px;
-        li {
-          cursor: pointer;
-          color: #0e1735;
-          font-size: 18px;
-          font-weight: bold;
-          display: flex;
-          gap: 18px;
-          flex-direction: column;
-          span {
-            color: #888b97;
-            font-size: 14px;
-            font-weight: 500;
-          }
-          span:hover {
-            color: #0e1735;
-            cursor: pointer;
-          }
-        }
-      }
+
+    .footer-menu {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .footer-column ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .footer-column ul li {
+      margin-bottom: 5px;
+    }
+
+    .footer-column ul li a {
+      text-decoration: none;
+      color: #888b97;
+      font-size: 14px;
+    }
+
+    .footer-column h4 {
+      font-size: 18px;
+      color: #0e1735;
+      margin-bottom: 18px;
+      font-weight: bold;
     }
   }
 }
