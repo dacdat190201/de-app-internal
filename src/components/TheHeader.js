@@ -2,7 +2,7 @@ import React from "react";
 import logo from "../assets/images/logo/logo.png";
 const TheHeader = () => {
   return (
-    <div className="home-header-sidebar">
+    <div className="home-header-sidebar container">
       <div className="home-header-sidebar-left">
         <div>
           <img src={logo} alt="logo" />

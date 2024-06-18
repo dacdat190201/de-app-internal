@@ -1,9 +1,13 @@
-import TheLayout from "./container/TheLayout";
+import TheFooter from "./components/TheFooter";
+import TheHeader from "./components/TheHeader";
+import HomePage from "./pages/homepage/HomePage";
 import "./scss/style.scss";
 function App() {
   return (
     <div className="c-wrapper">
-      <TheLayout />
+      <TheHeader />
+      <HomePage />
+      <TheFooter />
     </div>
   );
 }

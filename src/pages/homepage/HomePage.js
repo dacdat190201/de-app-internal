@@ -1,9 +1,10 @@
 import React from "react";
-import ThePopular from "../../components/ThePopular";
-
+import TheLayout from "../../container/TheLayout";
+import ThePopular from "./Popular/ThePopular";
 const HomePage = () => {
   return (
-    <div className="the-home-page">
+    <div>
+      <TheLayout />
       <ThePopular />
     </div>
   );

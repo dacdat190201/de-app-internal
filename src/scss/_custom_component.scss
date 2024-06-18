@@ -9,3 +9,26 @@
     cursor: pointer;
   }
 }
+.title-banner {
+  font-size: 32px;
+  color: #1b1c57;
+  line-height: 40px;
+  font-weight: 600;
+}
+.arrow-btn {
+  background-color: #e0e3eb;
+  width: 60px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 32px;
+  cursor: pointer;
+}
+.active {
+  cursor: pointer;
+  background-color: #10b981;
+  svg {
+    color: #fff;
+  }
+}

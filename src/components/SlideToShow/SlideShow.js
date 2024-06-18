@@ -2,22 +2,8 @@ import { Avatar } from "antd";
 import React, { useRef, useState } from "react";
 import home1 from "../../assets/slick/Rectangle 23.png";
 import Slider from "react-slick";
-import { LeftOutlined, RightOutlined } from "@ant-design/icons";
-const NextArrow = ({ onClick, isFirst }) => {
-  return (
-    <div className={`arrow-btn ${isFirst ? "" : "active"}`} onClick={onClick}>
-      <LeftOutlined />
-    </div>
-  );
-};
+import { NextArrow, PrevArrow } from "../compo";
 
-const PrevArrow = ({ onClick, isLast }) => {
-  return (
-    <div className={`arrow-btn ${isLast ? "" : "active"}`} onClick={onClick}>
-      <RightOutlined />
-    </div>
-  );
-};
 const SlideShow = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const sliderRef = useRef(null);

@@ -1,3 +1,40 @@
-.the-popular-page {
+.popular-section {
+  position: relative;
   margin-top: 120px;
+  .popular-section-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .popular-section-menu-tabs {
+    display: flex;
+    gap: 32px;
+    .popular-section-menu-tabs-item {
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border-radius: 32px;
+      border: 1px solid #e0e3eb;
+      color: #888b97;
+      font-size: 18px;
+      line-height: 28px;
+      font-weight: 500;
+      cursor: pointer;
+    }
+    .active {
+      background-color: #d1fae5;
+      border-color: #d1fae5;
+      span {
+        color: #10b981;
+      }
+      path {
+        fill: #10b981;
+      }
+    }
+  }
+  .popular-section-menu-arrow-btn {
+    display: flex;
+    gap: 16px;
+  }
 }

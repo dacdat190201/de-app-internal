@@ -1,4 +1,4 @@
-.c-wapper-home {
+.c-wrapper {
   .c-wrapper-home-header-background {
     position: relative;
     display: flex;
@@ -65,7 +65,9 @@
     display: flex;
     justify-content: space-between;
     margin: 40px auto 0px !important; /* Center horizontally */
-
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
     .home-header-sidebar-left {
       display: flex;
       gap: 12px;
