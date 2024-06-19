@@ -15,3 +15,4 @@ export const PrevArrow = ({ onClick, isLast }) => {
     </div>
   );
 };
+export const API_IMG = process.env.REACT_APP_URL_IMG;
