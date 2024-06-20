@@ -1,12 +1,19 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import TheBreadcrumb from "../../../components/TheBreadcrumb";
 import TitleBanner from "../../../components/TitleBanner";
 import { NextArrow, PrevArrow } from "../../../components/compo";
 import requestApi from "../../../helpers/apiHelper";
+import SlidePopular from "./SlidePopular";
+import SkeletonPopular from "../../../components/skeleton/SkeletonPopular";
 
 const ThePopular = () => {
   const [categories, setCategories] = useState([]);
+  const [loading, setLoading] = useState(false);
   const [isActive, setIsActive] = useState(null);
+  const [categoriesId, setCategoriesId] = useState({});
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const sliderRef = useRef(null);
+  const [itemSlide, setItemSlide] = useState([]);
   const renderSVG = (item) => {
     switch (item.name) {
       case "House":
@@ -59,10 +66,14 @@ const ThePopular = () => {
     }
   };
   useEffect(() => {
+    setLoading(true);
     requestApi("/categories", "GET")
       .then((response) => {
         if (response.data.isSuccess) {
-          setCategories(response.data.data);
+          let data = response.data.data;
+          setCategories(data);
+          setCategoriesId(data[0].id);
+          setLoading(false);
         }
       })
       .catch((err) => {
@@ -70,36 +81,66 @@ const ThePopular = () => {
       });
   }, []);
 
-  const handleClickMenu = (index) => {
+  const handleClickMenu = (index, item) => {
     setIsActive(index);
+    setCategoriesId(item.id);
   };
+  const nextSlide = () => {
+    if (currentSlide < itemSlide.length - 1) {
+      sliderRef.current.slickNext();
+    }
+  };
+
+  const prevSlide = () => {
+    if (currentSlide > 0) {
+      sliderRef.current.slickPrev();
+    }
+  };
+
   return (
     <div className="popular-section">
       <div className="container">
-        <TheBreadcrumb title={"Our Recommendation"} />
-        <div className="popular-section-menu">
-          <TitleBanner title="Featured House" />
-          <div className="popular-section-menu-tabs">
-            {categories.map((item, index) => {
-              return (
-                <div
-                  key={index}
-                  className={`popular-section-menu-tabs-item ${
-                    isActive === index ? "active" : ""
-                  }`}
-                  onClick={() => handleClickMenu(index)}
-                >
-                  <span>{renderSVG(item)}</span>
-                  <span>{item.name}</span>
+        {loading ? (
+          <SkeletonPopular />
+        ) : (
+          <>
+            <TheBreadcrumb title={"Our Recommendation"} />
+            <div>
+              <div className="popular-section-menu">
+                <TitleBanner title="Featured House" />
+                <div className="popular-section-menu-tabs">
+                  {categories.map((item, index) => {
+                    return (
+                      <div
+                        key={index}
+                        className={`popular-section-menu-tabs-item ${
+                          isActive === index ? "active" : ""
+                        }`}
+                        onClick={() => handleClickMenu(index, item)}
+                      >
+                        <span>{renderSVG(item)}</span>
+                        <span>{item.name}</span>
+                      </div>
+                    );
+                  })}
                 </div>
-              );
-            })}
-          </div>
-          <div className="popular-section-menu-arrow-btn">
-            <NextArrow />
-            <PrevArrow />
-          </div>
-        </div>
+                <div className="popular-section-menu-arrow-btn">
+                  <NextArrow onClick={prevSlide} isFirst={currentSlide === 0} />
+                  <PrevArrow
+                    onClick={nextSlide}
+                    isLast={currentSlide === itemSlide.length - 1}
+                  />
+                </div>
+              </div>
+              <SlidePopular
+                categoriesId={categoriesId}
+                setCurrentSlide={setCurrentSlide}
+                setItemSlide={setItemSlide}
+                sliderRef={sliderRef}
+              />
+            </div>
+          </>
+        )}
       </div>
     </div>
   );

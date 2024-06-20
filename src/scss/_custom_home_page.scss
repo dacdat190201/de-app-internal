@@ -1,10 +1,15 @@
 .popular-section {
   position: relative;
   margin-top: 120px;
+  min-height: 700px;
   .popular-section-menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+  }
+  .title-banner {
+    margin-left: 40px;
   }
   .popular-section-menu-tabs {
     display: flex;
@@ -37,4 +42,193 @@
     display: flex;
     gap: 16px;
   }
+  .popular-section-slide {
+    margin-top: 35px;
+    position: absolute;
+    padding-left: 40px;
+
+    .slick-slide {
+      display: inline-block;
+      padding-right: 20px;
+    }
+    .slider-item {
+      width: auto;
+    }
+    .popular-section-slide-item {
+      display: flex !important;
+      flex-direction: column;
+      gap: 20px;
+      min-width: 340px !important;
+      min-height: 540px;
+      border-radius: 24px;
+      border: 1px solid #e0e3eb;
+      .popular-section-slide-item-img {
+        width: 338px;
+        height: 384px;
+        overflow: hidden;
+        border-radius: 24px;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+      .popular-section-slide-item-content {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        padding: 0px 10px;
+        .popular-section-slide-item-title {
+          font-size: 24px;
+          font-weight: 500;
+          color: #0e1735;
+          line-height: 32px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+        span {
+          font-size: 20px;
+          line-height: 32px;
+          color: #3c4563;
+        }
+      }
+      .popular-section-slide-item-icon {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 15px;
+        padding: 0px 10px 24px;
+        .product_attribute {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          svg {
+            height: 24px;
+            width: 24px;
+          }
+          path {
+            fill: #888b97;
+          }
+          span {
+            color: #888b97;
+          }
+        }
+      }
+    }
+    .popular-section-slide-item:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.the-see-house-page {
+  margin-top: 120px;
+  position: relative;
+
+  .the-see-house-section-page {
+    display: flex;
+    justify-content: space-between;
+    hr {
+      max-width: 440px;
+      background-color: #f0f3fd;
+      border: none;
+      height: 3px;
+    }
+    .the-see-house-section-left {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-left: 40px;
+      max-width: 524px;
+      .title {
+        color: #1b1c57;
+        font-size: 32px;
+        line-height: auto;
+        font-weight: bold;
+      }
+      span {
+        color: #626687;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+      }
+      p {
+        color: #1b1c57;
+        font-size: 16px;
+        line-height: 28px;
+        font-weight: bold;
+      }
+      .product_attribute {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 16px;
+        > div {
+          display: flex;
+          gap: 16px;
+          svg {
+            height: 24px;
+            width: 24px;
+          }
+          path {
+            fill: #888b97;
+          }
+          span {
+            color: #888b97;
+          }
+        }
+      }
+      .the-see-house-section-left-contact {
+        display: flex;
+        gap: 57px;
+        .info {
+          display: flex;
+          align-items: center;
+          gap: 24px;
+          .sub-info {
+            display: flex;
+            flex-direction: column;
+            color: #0e1735;
+            font-size: 18px;
+            line-height: 24px;
+            font-weight: 500;
+            span {
+              color: #888b97;
+              font-size: 16px;
+              line-height: 24px;
+              font-weight: 500;
+            }
+          }
+        }
+        .button {
+          padding: 13px 16px;
+          background-color: #10b981;
+          border-radius: 32px;
+          display: flex;
+          align-items: center;
+          gap: 16px;
+          color: #fff;
+          font-size: 14px;
+          font-weight: 600;
+          line-height: 22px;
+        }
+      }
+    }
+  }
+}
+.the-see-house-page::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 600px; /* Đặt chiều rộng của background 1 lớn hơn */
+  height: 700px; /* Chiều cao của background sẽ là 100% để nó bao phủ toàn bộ footer */
+  background-image: url("../assets/images/backgrounds/backgourd-contact1.png"),
+    url("../assets/images/backgrounds/backgourd-contact2.png");
+  background-repeat: no-repeat;
+  background-size: contain; /* Đặt kích thước của background 1 là auto để giữ nguyên tỷ lệ và background 2 là auto */
+  background-position: bottom right;
+  z-index: -10;
 }
