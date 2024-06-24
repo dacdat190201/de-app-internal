@@ -3,6 +3,10 @@ import TheBreadcrumb from "../../../components/TheBreadcrumb";
 import { renderAttributes } from "../../../components/compo";
 import { Avatar } from "antd";
 import avatar from "./../../../assets/icon/avatar-contact.png";
+import video from "./../../../assets/video/intro-house.mp4";
+import img1 from "../../../assets/video/Rectangle 20.png";
+import img2 from "../../../assets/video/Rectangle 19.png";
+import img3 from "../../../assets/video/Rectangle 18.png";
 const TheSeeHouse = () => {
   const dataIcon = [
     { product_attribute_type: 3, value: 4 },
@@ -56,7 +60,17 @@ const TheSeeHouse = () => {
             </div>
           </div>
           <div className="the-see-house-section-right">
-            <TheBreadcrumb title={"Ready To Sell!"} />
+            <video autoPlay muted loop controls>
+              <source src={video} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <div className="list-img-bottom">
+              <img src={img3} alt="" />
+              <div>
+                <img src={img1} alt="" />
+                <img src={img2} alt="" />
+              </div>
+            </div>
           </div>
         </div>
       </div>
