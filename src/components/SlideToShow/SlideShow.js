@@ -99,13 +99,13 @@ const SlideShow = () => {
           </div>
         </Slider>
       </div>
-      <div className="custom-arrow-btn">
+      {/* <div className="custom-arrow-btn">
         <NextArrow onClick={prevSlide} isFirst={currentSlide === 0} />
         <PrevArrow
           onClick={nextSlide}
           isLast={currentSlide === itemCount - 1}
         />
-      </div>
+      </div> */}
     </>
   );
 };

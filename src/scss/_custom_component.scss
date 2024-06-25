@@ -32,3 +32,16 @@
     color: #fff;
   }
 }
+.btn {
+  padding: 15px 16px;
+  border-radius: 32px;
+  background-color: #10b981;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: var(--font-family);
+}
+.btn:hover {
+  background-color: #43c99c;
+  color: #fff;
+}

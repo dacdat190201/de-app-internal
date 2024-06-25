@@ -3,7 +3,6 @@
     position: relative;
     display: flex;
     overflow: hidden;
-    height: 720px;
   }
   .c-wrapper-home-header-background::before {
     content: "";
@@ -19,6 +18,11 @@
     top: 0;
     border-radius: 0 0 0 120px;
     z-index: -10;
+    @media screen and (max-width: 1200px) {
+      border-radius: 0px 0 40px 40px;
+      opacity: 0.7;
+      width: 100%;
+    }
   }
   .c-wrapper-home-header-background::after {
     content: "";
@@ -34,6 +38,9 @@
     top: 0;
     border-radius: 0 0 0 120px;
     z-index: -10;
+    @media screen and (max-width: 1200px) {
+      display: none;
+    }
   }
   .c-wapper-home-header-background {
     .header-background-left {
@@ -162,7 +169,7 @@
             position: absolute;
             display: flex;
             gap: 13px;
-            height: 48px;
+            padding: 23px 16px;
             border-radius: 32px;
             max-width: 109px;
             z-index: 10;
