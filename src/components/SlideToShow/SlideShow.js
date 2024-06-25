@@ -2,7 +2,6 @@ import { Avatar } from "antd";
 import React, { useRef, useState } from "react";
 import home1 from "../../assets/slick/Rectangle 23.png";
 import Slider from "react-slick";
-import { NextArrow, PrevArrow } from "../compo";
 
 const SlideShow = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
