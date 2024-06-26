@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "../assets/images/logo/logo.png";
+import { Link } from "react-router-dom";
 const TheHeader = () => {
   return (
     <div className="home-header-sidebar container">
@@ -11,9 +12,15 @@ const TheHeader = () => {
       </div>
       <div className="home-header-sidebar-right">
         <div className="home-header-sidebar-right-menu">
-          <button>About Us</button>
-          <button>Article</button>
-          <button>Property</button>
+          <Link to="/about-us" className="menu-link">
+            About Us
+          </Link>
+          <Link to="/article" className="menu-link">
+            Article
+          </Link>
+          <Link to="/property" className="menu-link">
+            Property
+          </Link>
         </div>
         <div className="signup-btn">Sign Up!</div>
       </div>

@@ -75,6 +75,7 @@
     position: absolute;
     left: 50%;
     transform: translate(-50%, -50%);
+    z-index: 10;
     .home-header-sidebar-left {
       display: flex;
       gap: 12px;
@@ -89,9 +90,10 @@
       display: flex;
       gap: 56px;
       .home-header-sidebar-right-menu {
+        position: relative;
         display: flex;
         gap: 24px;
-        button {
+        .menu-link {
           padding: 6px 18px;
           font-size: 14px;
           font-weight: bold;
@@ -100,9 +102,15 @@
           background-color: rgba(255, 255, 255, 0.3);
           border: 1px solid #ffffff;
           color: #f0f3fd;
+          text-decoration: none;
+          z-index: 1000;
+          cursor: pointer;
           @media screen and (max-width: 1200px) {
             background-color: rgba(0, 0, 0, 0.3);
           }
+        }
+        .menu-link:hover {
+          background-color: rgba(255, 255, 255, 0.5);
         }
       }
       .signup-btn {
@@ -114,6 +122,9 @@
         color: #047857;
         font-weight: bold;
         font-size: 14px;
+      }
+      .signup-btn:hover {
+        background-color: #90ffc6;
       }
     }
   }
