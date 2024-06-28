@@ -3,9 +3,11 @@ import { Outlet } from "react-router-dom";
 import Main from "../components/layout/Main";
 const TheLayoutAdmin = () => {
   return (
-    <Main>
-      <Outlet />
-    </Main>
+    <div className="admin-custom">
+      <Main>
+        <Outlet />
+      </Main>
+    </div>
   );
 };
 

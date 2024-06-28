@@ -22,7 +22,9 @@ const TheHeader = () => {
             Property
           </Link>
         </div>
-        <div className="signup-btn">Sign Up!</div>
+        <Link to="/sign-up" className="signup-btn menu-link">
+          Sign Up!
+        </Link>
       </div>
     </div>
   );

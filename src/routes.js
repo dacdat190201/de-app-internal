@@ -20,7 +20,8 @@ const Tables = React.lazy(() => import("./pagesadmin/Tables"), "HTablesome");
 const Billing = React.lazy(() => import("./pagesadmin/Billing"), "Billing");
 const Rtl = React.lazy(() => import("./pagesadmin/Rtl"), "Rtl");
 const Profile = React.lazy(() => import("./pagesadmin/Profile"), "Profile");
-
+// const SignUp = React.lazy(() => import("./pagesadmin/SignUp"), "SignUp");
+// const SignIn = React.lazy(() => import("./pagesadmin/SignIn"), "SignIn");
 export const AppInternal = [
   { path: "/", exact: true, name: "Internal", component: ThePublicLayout },
   { path: "/home", name: "Trang chủ", component: TheLayoutSecond },
@@ -29,6 +30,8 @@ export const AppInternal = [
 ];
 export const AdminInternal = [
   { path: "/admin", exact: true, name: "Home", component: Home },
+  // { path: "/sign-up", exact: true, name: "SignUp", component: SignUp },
+  // { path: "/sign-in", exact: true, name: "Home", component: SignIn },
   { path: "/dashboard", exact: true, name: "Home", component: Home },
   { path: "/tables", exact: true, name: "Tables", component: Tables },
   { path: "/billing", exact: true, name: "Billing", component: Billing },

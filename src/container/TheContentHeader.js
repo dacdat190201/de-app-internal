@@ -13,7 +13,7 @@ const TheContentHeader = () => {
           <div className="home-page-content-left">
             <div className="home-page-content-title">
               Find The Place To
-              <br /> Live
+              <br /> Live{" "}
               <span className="home-page-content-title-white">Your Dreams</span>
               <br /> Easily Here
               <div className="home-page-content-sub-title">
