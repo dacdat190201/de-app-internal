@@ -1,6 +1,9 @@
 import React from "react";
-import TheLayoutSecond from "./container/TheLayoutSecond";
 
+const TheLayoutSecond = React.lazy(
+  () => import("./container/TheLayoutSecond"),
+  "TheLayoutSecond"
+);
 const ThePublicLayout = React.lazy(
   () => import("./container/ThePublicLayout"),
   "ThePublicLayout"

@@ -14,10 +14,7 @@ const TheContentHeader = () => {
             <div className="home-page-content-title">
               Find The Place To
               <br /> Live
-              <span className="home-page-content-title-white">
-                {" "}
-                Your Dreams
-              </span>
+              <span className="home-page-content-title-white">Your Dreams</span>
               <br /> Easily Here
               <div className="home-page-content-sub-title">
                 Everything you need about finding your place to live will be

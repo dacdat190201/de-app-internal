@@ -2,10 +2,8 @@ import { Component, Suspense } from "react";
 import ThePublicLayout from "./container/ThePublicLayout";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import TheLayoutSecond from "./container/TheLayoutSecond";
+import { AdminInternal, AppInternal } from "./routes";
 import TheLayoutAdmin from "./container/TheLayoutAdmin";
-import { AppInternal } from "./routes";
-import { AdminInternal } from "./routes";
-
 const Index = () => {
   return (
     <Suspense fallback={<div>Loading...</div>}>
@@ -31,7 +29,7 @@ const Index = () => {
             />
           ))}
         </Route>
-        <Route path="*" element={<Navigate to="/home" />} />
+        <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </Suspense>
   );

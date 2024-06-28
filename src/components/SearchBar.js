@@ -1,10 +1,10 @@
-import React from "react";
 import { Button, Input, Space } from "antd";
+import React from "react";
 
 const SearchBar = () => {
   return (
     <div className="home-page-content-search">
-      <Space.Compact>
+      <Space>
         <Input
           prefix={
             <>
@@ -40,7 +40,7 @@ const SearchBar = () => {
             />
           </svg>
         </Button>
-      </Space.Compact>
+      </Space>
     </div>
   );
 };

@@ -98,11 +98,14 @@
       }
       .home-page-content-search {
         max-width: 100%;
-        .ant-space-compact {
+        .ant-space {
           position: relative;
           min-width: 496px;
+          .ant-space-item {
+            min-width: 100%;
+          }
           .ant-input-affix-wrapper {
-            padding: 16px 24px;
+            padding: 8px 24px;
             border-radius: 32px;
             .ant-input {
               font-size: 14px;
@@ -111,18 +114,20 @@
               max-width: 300px;
             }
           }
-          .ant-input-outlined:hover {
+
+          .ant-input-affix-wrapper:hover {
             border-color: #10b981;
           }
-          .ant-input-outlined:focus-within {
+          .ant-input-affix-wrapper:focus-within {
             border-color: #10b981;
           }
-          .ant-input-prefix {
+          .ant-input-affix-wrapper {
             margin-right: 16px;
           }
           .ant-btn {
             position: absolute;
             display: flex;
+            align-items: center;
             gap: 13px;
             padding: 23px 16px;
             border-radius: 32px;
