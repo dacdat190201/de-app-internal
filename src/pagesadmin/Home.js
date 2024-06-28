@@ -500,22 +500,7 @@ function Home() {
                   xl={14}
                   className="mobile-24"
                 >
-                  <div className="h-full col-content p-20">
-                    <div className="ant-muse">
-                      <Text>Built by developers</Text>
-                      <Title level={5}>Muse Dashboard for Ant Design</Title>
-                      <Paragraph className="lastweek mb-36">
-                        From colors, cards, typography to complex elements, you
-                        will find the full documentation.
-                      </Paragraph>
-                    </div>
-                    <div className="card-footer">
-                      <a className="icon-move-right" href="#pablo">
-                        Read More
-                        {<RightOutlined />}
-                      </a>
-                    </div>
-                  </div>
+                  <div className="h-full col-content p-20">abs</div>
                 </Col>
                 <Col
                   xs={24}
@@ -538,10 +523,7 @@ function Home() {
               <div className="gradent h-full col-content">
                 <div className="card-content">
                   <Title level={5}>Work with the best</Title>
-                  <p>
-                    Wealth creation is an evolutionarily recent positive-sum
-                    game. It is all about who take the opportunity first.
-                  </p>
+                  <p>abc</p>
                 </div>
                 <div className="card-footer">
                   <a className="icon-move-right" href="#pablo">
