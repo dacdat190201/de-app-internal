@@ -5,9 +5,9 @@ const TheHeader = () => {
   return (
     <div className="home-header-sidebar container">
       <div className="home-header-sidebar-left">
-        <div>
+        <Link to="/">
           <img src={logo} alt="logo" />
-        </div>
+        </Link>
         <div className="home-header-sidebar-title">Hounter</div>
       </div>
       <div className="home-header-sidebar-right">

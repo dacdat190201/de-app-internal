@@ -5,9 +5,15 @@ const ThePublicLayout = React.lazy(
   "ThePublicLayout"
 );
 const AboutUs = React.lazy(() => import("./pages/about/AboutUs"), "AboutUs");
+const Products = React.lazy(
+  () => import("./pages/products/Products"),
+  "Products"
+);
 
-export const AppIntertal = [
+export const AppInternal = [
   { path: "/", exact: true, name: "Internal" },
   { path: "/home", name: "Trang chủ", component: ThePublicLayout },
-  { path: "/about-us", name: "Trang chủ", component: AboutUs },
+  { path: "/about-us", name: "About ne~", component: AboutUs },
+  { path: "/property", name: "property", component: Products },
 ];
+export const AdminInternal = [{ path: "/admin", exact: true, name: "Admin" }];

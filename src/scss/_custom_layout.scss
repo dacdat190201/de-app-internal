@@ -1,0 +1,33 @@
+.c-layout-wrapper {
+  background-color: #f9f9f9;
+  min-height: 200px;
+  position: relative;
+  .home-header-sidebar {
+    .menu-link {
+      background-color: rgba(194, 194, 194, 0.3) !important;
+      color: #0e1735 !important;
+    }
+    .menu-link:hover {
+      background-color: rgba(194, 194, 194, 0.2) !important;
+    }
+  }
+  .bread-title {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 100px;
+    h4 {
+      font-size: 36px;
+      font-weight: bold;
+    }
+    .bread-title-sub {
+      h4 {
+        font-size: 20px;
+        font-weight: 500;
+      }
+    }
+  }
+}
